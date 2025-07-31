@@ -6,9 +6,6 @@ authors = ["Francis Pelletier <francis.pelletier@mila.quebec>"]
 license = "MIT"
 readme = "README.md"
 
-[tool.poetry.group.dev]
-optional = true
-
 [tool.poetry.dependencies]
 python = ">=3.10,<3.13"
 mkdocs = "^1.6.1"
