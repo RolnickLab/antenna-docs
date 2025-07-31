@@ -56,8 +56,12 @@ targets: help
 ## -- Dev targets --------------------------------------------------------------------------------------------------- ##
 .PHONY: install
 install: ## Install project's dependencies
-	@poetry install --with dev
+	@poetry install
 	@pre-commit install
+
+.PHONY: pre-commit
+pre-commit: ## Run pre-commit on all files
+	@nox -s precommit
 
 ## -- Docs targets -------------------------------------------------------------------------------------------------- ##
 .PHONY: preview-docs
@@ -69,8 +73,8 @@ preview-docs: ## Preview the documentation site locally
 build-docs: ## Build the documentation files locally
 	@mkdocs build
 
-.PHONY: publish-docs
-publish-docs: ## Publish the documentation files to the live Github page - builds and deploys everything
+.PHONY: deploy-docs
+deploy-docs: ## Publish and deploy the documentation to the live Github page
 	@echo""; \
 	echo -e "\e[1;39;41m-- WARNING --\e[0m This command will deploy all current changes to the live Github page - Making it publicly available"; \
 	echo""; \
