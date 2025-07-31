@@ -31,44 +31,38 @@ you only need to do this once per system (i.e., on your computer, on the MILA cl
 1. Install pipx `pip install pipx`
 2. Install poetry with pipx: `pipx install poetry`
 
-### Create project's virtual environment
-
-1. Read the documentation on the specific cluster if required:
-   - [How to create a virtual environment for the Mila cluster](docs/environment_creation_mila.md)
-   - [How to create an environment for the DRAC cluster](docs/environment_creation_drac.md)
-2. Create environment : `virtualenv <PATH_TO_ENV>`
-   - Or, using venv : `python3 -m venv <PATH_TO_ENV>`
-3. Activate environment : `source <PATH_TO_ENV>/bin/activate`
-
 ### Install package and dependencies
+
+```sh
+make install
+```
+
+#### Manual instructions
 
 1. Install your package : `poetry install`
 2. Initialize pre-commit : `pre-commit install`
 
-### Development
+### MKdocs
 
-1. [Add required dependencies](./CONTRIBUTING.md#adding-dependencies)
-2. Create some new modules in the [src](src) folder!
+To preview the current changes:
+
+```sh
+make preview-docs
+```
+
+To build the docs locally
+
+```sh
+make build-docs
+```
+
+To deploy the docs
+
+```sh
+make deploy-docs
+```
 
 ## Detailed documentation
-
-### Installation
-
-Once the virtual environment is built and `poetry` is installed, follow these steps to
-install the package's dependencies:
-
-1. Make sure your virtual environment is active
-2. Install the package and its dependencies using the following command:
-   - `poetry install`
-   - Alternatively, you can also install using `pip install -e .`, which will install
-     your package, [configured scripts](https://python-poetry.org/docs/pyproject#scripts)
-     and main dependencies, but without creating a `poetry.lock` file. This approach
-     will also ignore existing `poetry.lock` files
-
-### Development
-
-If you want to contribute to this repository, some development dependencies need to be
-installed and used.
 
 #### Pre-commit
 
