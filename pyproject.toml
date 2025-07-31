@@ -1,0 +1,182 @@
+[tool.poetry]
+name = "src"
+version = "0.0.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.group.dev]
+optional = true
+
+# [tool.poetry.group.pypi]
+# optional = true
+
+#[tool.poetry.group.pypi.dependencies]
+## Commented out as a reference/example
+## Optional dependencies that need to be installed with poetry
+## `poetry install --with pypi`
+
+[tool.poetry.dependencies]
+# Main dependencies that can be still installed with the command
+# `pip install -e .` and `pip install -e . --no-index` 
+# Ideal for main project dependencies and those that need to be installed
+# via DRAC pre-built wheels
+#
+# Strongly recommended to use ~ instead of ^ for better compatibility and 
+# reproducibility
+#
+# ex. requests = "~2.31.0"
+python = ">=3.10,<3.13"
+
+[tool.poetry.group.precommit.dependencies]
+# Optional dependencies that need to be installed with poetry
+# `poetry install --with dev`
+pre-commit = "^4.2.0"
+
+[tool.poetry.group.dev.dependencies]
+# Optional dependencies that need to be installed with poetry
+# `poetry install --with dev`
+pytest = "^8.3.5"
+pylint = "^3.3.7"
+flake8 = "^7.2.0"
+black = "^25.1.0"
+isort = "^6.0.1"
+flynt = "^1.0.2"
+docformatter = {extras = ["tomli"], version = "^1.7.7"}
+mccabe = "^0.7.0"
+nox = "^2025.5.1"
+autoflake = "^2.3.1"
+autopep8 = "^2.3.2"
+ruff = "^0.11.11"
+flake8-pyproject = "^1.2.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+#
+# Scripts
+#
+[tool.poetry.scripts]
+
+#
+# Tools
+#
+
+[tool.autoflake]
+remove-all-unused-imports = true
+in-place = true
+ignore-init-module-imports = true
+remove-unused-variables = true
+recursive = true
+
+[tool.autopep8]
+max_line_length = 120
+in-place = true
+aggressive = 2
+ignore = ["W503", "E203", "E501"]
+recursive = true
+
+[tool.flake8]
+max-line-length = 120
+ignore = ["E203", "E266", "E501", "W503"]
+docstring-convention = "numpy"
+max-complexity = 20
+per-file-ignores = []
+exclude = [
+    ".git",
+    "migrations",
+    "__pycache__"
+]
+
+[tool.pylint]
+disable = "C0114,C0115,C0116,R0903,R1710,W1203"
+max-line-length = 120
+max-locals = 20
+max-args = 16
+max-positional-arguments = 16
+max-attributes = 20
+
+[tool.black]
+line-length = 120
+target-version = ["py311"]
+
+[tool.isort]
+profile = "black"
+
+[tool.flynt]
+line-length = 120
+transform-concats = true
+verbose = true
+
+[tool.docformatter]
+style = "numpy"
+pre-summary-newline = true
+wrap-descriptions = 120
+wrap-summaries = 120
+blank = false
+exclude = []
+recursive = true
+
+[tool.ruff]
+line-length = 120
+
+target-version = "py311"
+
+exclude = [
+  ".git",
+  "migrations",
+  "__pycache__",
+]
+
+[tool.ruff.lint]
+select = [
+    "A",   # Flake8 Built ins
+    "E",   # Error (Flake8)
+    "F",   # Pyflakes (Flake8)
+    "W",   # Warning (Flake8)
+    "I",   # isort (import sorting)
+    "N",   # Naming conventions (Pylint, etc.)
+    "C90", # mccabe complexity (replaces flake8 --max-complexity and mccabe)
+    "B",   # Bugbear (common linting issues)
+    "UP",  # pyupgrade (suggests modern Python syntax)
+    "PLR", # Pylint refactor
+    "PLE", # Pylint error (specific Pylint error rules)
+    "PLW", # Pylint warning (specific Pylint warning rules)
+    "PLC", # Pylint convention (specific Pylint convention rules)
+    "R",   # Refactor (Pylint refactoring suggestions)
+    "TID", # TO DO comments
+    "FAST",# FastAPI
+    "C4",  # List and dict comprehensions
+    "DJ",  # Django
+    "PIE", # Returns and unnecessary returns
+    "Q",   # Double quotes
+    "RET", # Fix return statements
+    "PTH", # Enforce pathlib
+    "ARG", # Unused argument
+    "FLY", # Flynt
+    "NPY", # Numpy specific
+    "PD",  # Pandas specific
+    "RUF", # Ruff specific
+]
+
+ignore = [
+  "E203",  # whitespace before ':', Black already handles this
+  "E266",  # too many leading '#' for comments
+  "E501",  # line too long (we enforce via line-length instead)
+  "RET504",
+  "RUF013",
+  "PTH123"
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy" # Corresponds to flake8's docstring-convention and docformatter style.
+
+[tool.ruff.lint.pylint]
+max-args = 16
+
+[tool.ruff.lint.mccabe]
+# cyclomatic complexity
+max-complexity = 18
