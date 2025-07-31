@@ -2,36 +2,18 @@
 name = "src"
 version = "0.0.0"
 description = ""
-authors = ["Your Name <you@example.com>"]
+authors = ["Francis Pelletier <francis.pelletier@mila.quebec>"]
 license = "MIT"
 readme = "README.md"
 
 [tool.poetry.group.dev]
 optional = true
 
-# [tool.poetry.group.pypi]
-# optional = true
-
-#[tool.poetry.group.pypi.dependencies]
-## Commented out as a reference/example
-## Optional dependencies that need to be installed with poetry
-## `poetry install --with pypi`
-
 [tool.poetry.dependencies]
-# Main dependencies that can be still installed with the command
-# `pip install -e .` and `pip install -e . --no-index` 
-# Ideal for main project dependencies and those that need to be installed
-# via DRAC pre-built wheels
-#
-# Strongly recommended to use ~ instead of ^ for better compatibility and 
-# reproducibility
-#
-# ex. requests = "~2.31.0"
 python = ">=3.10,<3.13"
+mkdocs = "^1.6.1"
 
 [tool.poetry.group.precommit.dependencies]
-# Optional dependencies that need to be installed with poetry
-# `poetry install --with dev`
 pre-commit = "^4.2.0"
 
 [tool.poetry.group.dev.dependencies]
