@@ -12,6 +12,10 @@ optional = true
 [tool.poetry.dependencies]
 python = ">=3.10,<3.13"
 mkdocs = "^1.6.1"
+mdformat-gfm = "^0.4.1"
+mdformat-frontmatter = "^2.0.8"
+mdformat-footnote = "^0.1.1"
+mdformat-gfm-alerts = "^2.0.0"
 
 [tool.poetry.group.precommit.dependencies]
 pre-commit = "^4.2.0"
