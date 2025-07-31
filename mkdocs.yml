@@ -1,7 +1,7 @@
 site_name: Antenna Platform Documentation
 
 nav:
-  - sections/documentation.md
+  - sections/user-guide.md
   - sections/developer-guide.md
 
 theme: readthedocs
