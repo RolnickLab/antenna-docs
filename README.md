@@ -2,18 +2,33 @@
 
 ## Description
 
-This is the repository for Antenna's documentation portal
+This is the repository for Antenna's documentation portal.
+
+Documentation is built using MkDocs and deployed using GitHub Pages.
+
+### To contribute to the documentation:
+
+- Install the dependencies - [see Quick Setup](#quick-setup)
+- Create a new branch
+- Add/modify the files found in the [docs](docs) folder
+- Execute `make preview-docs` to visualize the changes and formatting
+- Execute `make pre-commit` to ensure proper formatting
+- Open a Pull Request to submit your changes
+
+Once the Pull Request is reviewed and merged, the new version will be auto-deployed
+via the configured GitHub Action found [here](.github/workflows/publish-gh-pages.yml).
 
 ## Python Version
 
-This project uses Python version 3.10 and up.
+This project should be compatible with Python version 3.10 and up.
+
+Current CI and build uses 3.11.
 
 ## Build Tool
 
-This project uses `poetry` as a build tool. Using a build tool has the advantage of
-streamlining script use as well as fix path issues related to imports.
+This project uses `poetry` as a build tool.
 
-## Quick setup
+## Quick Setup
 
 This is a short step by step, no nonsense way of setting things up and start working
 right away.
@@ -37,12 +52,13 @@ you only need to do this once per system (i.e., on your computer, on the MILA cl
 make install
 ```
 
-#### Manual instructions
+To run the pre-commit checks:
 
-1. Install your package : `poetry install`
-2. Initialize pre-commit : `pre-commit install`
+```sh
+make pre-commit
+```
 
-### MKdocs
+### MkDocs
 
 To preview the current changes:
 
@@ -56,7 +72,7 @@ To build the docs locally
 make build-docs
 ```
 
-To deploy the docs
+To deploy the docs manually (reserved for repository admins)
 
 ```sh
 make deploy-docs
@@ -64,7 +80,12 @@ make deploy-docs
 
 ## Detailed documentation
 
-#### Pre-commit
+### Manual instructions
+
+1. Install your package : `poetry install`
+2. Initialize pre-commit : `pre-commit install`
+
+### Pre-commit
 
 `pre-commit` is installed by default when installing the package using `poetry install`.
 This is a very lightweight library. It is used for automated and low effort code
@@ -96,11 +117,11 @@ quality and code analysis.
   section below, except `pylint`, the stricter cyclomatic `complexity`, `ruff` and,
   of course, `test`.
 
-#### Python library dependencies
+### Python library dependencies
 
 To keep things simple, it is recommended to store all new dependencies as main
 dependencies, unless you are already familiar with dependency management.
 
-#### How to contribute
+### How to contribute
 
 Read and follow the [Contributing guidelines](CONTRIBUTING.md)
