@@ -56,10 +56,10 @@ targets: help
 ## -- Dev targets --------------------------------------------------------------------------------------------------- ##
 .PHONY: install
 install: ## Install project's dependencies
-	@poetry install
+	@poetry install --with dev
 	@pre-commit install
 
-.PHONY: install-ci
+.PHONY: install-package
 install-ci: ## Install project's dependencies for github-actions
 	@poetry install
 
