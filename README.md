@@ -58,7 +58,7 @@ To run the pre-commit checks:
 make pre-commit
 ```
 
-### MKdocs
+### MkDocs
 
 To preview the current changes:
 
