@@ -56,22 +56,30 @@ targets: help
 ## -- Dev targets --------------------------------------------------------------------------------------------------- ##
 .PHONY: install
 install: ## Install project's dependencies
-	@poetry install
+	@poetry install --with dev
 	@pre-commit install
+
+.PHONY: install-ci
+install-ci: ## Install project's dependencies for github-actions
+	@poetry install --with dev
+
+.PHONY: install-package
+install-ci: ## Install project's package only
+	@poetry install
 
 .PHONY: pre-commit
 pre-commit: ## Run pre-commit on all files
-	@nox -s precommit
+	@poetry run nox -s precommit
 
 ## -- Docs targets -------------------------------------------------------------------------------------------------- ##
 .PHONY: preview-docs
 preview-docs: ## Preview the documentation site locally
-	@mkdocs serve
+	@poetry run mkdocs serve
 
 
 .PHONY: build-docs
 build-docs: ## Build the documentation files locally
-	@mkdocs build
+	@poetry run mkdocs build
 
 .PHONY: deploy-docs
 deploy-docs: ## Publish and deploy the documentation to the live Github page
@@ -83,7 +91,7 @@ deploy-docs: ## Publish and deploy the documentation to the live Github page
 	case $$ans in \
 		[Yy]*) \
 			echo""; \
-			mkdocs gh-deploy; \
+			poetry run mkdocs gh-deploy; \
 			echo""; \
 			;; \
 		*) \
