@@ -52,8 +52,6 @@ pip install pre-commit  # Install pre-commit system-wide
 pre-commit install  # Install the hook for our project
 ```
 
-If using VS Code, install the [formatting extensions](.vscode/extensions.json) that are automatically suggested for the project (e.g. black). Format-on-save should be turned on by default from the project's [vscode settings file](.vscode/settings.json).
-
 ### Frontend
 
 #### Dependencies
