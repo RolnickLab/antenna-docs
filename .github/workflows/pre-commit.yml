@@ -35,7 +35,7 @@ jobs:
       
       - name: Install dependencies
         run: |
-          make install
+          make install-ci
 
       - name: Run Pre-commit checks
         run: |

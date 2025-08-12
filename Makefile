@@ -59,8 +59,12 @@ install: ## Install project's dependencies
 	@poetry install --with dev
 	@pre-commit install
 
-.PHONY: install-package
+.PHONY: install-ci
 install-ci: ## Install project's dependencies for github-actions
+	@poetry install --with dev
+
+.PHONY: install-package
+install-ci: ## Install project's package only
 	@poetry install
 
 .PHONY: pre-commit
