@@ -13,13 +13,9 @@ mdformat-gfm = "^0.4.1"
 mdformat-frontmatter = "^2.0.8"
 mdformat-footnote = "^0.1.1"
 mdformat-gfm-alerts = "^2.0.0"
-
-[tool.poetry.group.precommit.dependencies]
 pre-commit = "^4.2.0"
 
 [tool.poetry.group.dev.dependencies]
-# Optional dependencies that need to be installed with poetry
-# `poetry install --with dev`
 pytest = "^8.3.5"
 pylint = "^3.3.7"
 flake8 = "^7.2.0"

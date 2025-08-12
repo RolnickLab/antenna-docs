@@ -59,6 +59,10 @@ install: ## Install project's dependencies
 	@poetry install
 	@pre-commit install
 
+.PHONY: install-ci
+install-ci: ## Install project's dependencies for github-actions
+	@poetry install
+
 .PHONY: pre-commit
 pre-commit: ## Run pre-commit on all files
 	@nox -s precommit
