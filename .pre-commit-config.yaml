@@ -59,7 +59,7 @@ repos:
   rev: v3.13.7
   hooks:
     - id: markdown-link-check
-      args: [-q]
+      args: ["-q", "--config", ".markdown-link-check.json"]
 
 - repo: https://github.com/hukkin/mdformat
   rev: 0.7.22
