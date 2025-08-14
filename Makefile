@@ -64,12 +64,16 @@ install-ci: ## Install project's dependencies for github-actions
 	@poetry install --with dev
 
 .PHONY: install-package
-install-ci: ## Install project's package only
+install-package: ## Install project's package only
 	@poetry install
 
-.PHONY: pre-commit
-pre-commit: ## Run pre-commit on all files
-	@poetry run nox -s precommit
+.PHONY: fix-lint
+fix-lint: ## Fix linting and formatting with pre-commit on all files
+	@poetry run pre-commit run --all-files
+
+.PHONY: local-check-links
+local-check-links: ## Check links in markdown files locally using a docker image
+	@$(SHELL) "$(PROJECT_PATH)/scripts/link-checker-with-docker.sh"
 
 ## -- Docs targets -------------------------------------------------------------------------------------------------- ##
 .PHONY: preview-docs

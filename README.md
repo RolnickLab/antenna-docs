@@ -12,7 +12,7 @@ Documentation is built using MkDocs and deployed using GitHub Pages.
 - Create a new branch
 - Add/modify the files found in the [docs](docs) folder
 - Execute `make preview-docs` to visualize the changes and formatting
-- Execute `make pre-commit` to ensure proper formatting
+- Execute `make fix-lint` to ensure proper formatting and linting
 - Open a Pull Request to submit your changes
 
 Once the Pull Request is reviewed and merged, the new version will be auto-deployed
@@ -52,10 +52,10 @@ you only need to do this once per system (i.e., on your computer, on the MILA cl
 make install
 ```
 
-To run the pre-commit checks:
+To run the checks:
 
 ```sh
-make pre-commit
+make fix-lint
 ```
 
 ### MkDocs
@@ -111,11 +111,7 @@ quality and code analysis.
 - To remove the `pre-commit` hook, execute `pre-commit clean`
 
 - If you do not want to install `pre-commit` along with your main package, you can use
-  `poetry install --without precommit`
-
-- The `pre-commit` configuration executes most of the tools described in the `nox`
-  section below, except `pylint`, the stricter cyclomatic `complexity`, `ruff` and,
-  of course, `test`.
+  `make install-package`
 
 ### Python library dependencies
 

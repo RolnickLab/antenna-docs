@@ -16,24 +16,10 @@ mdformat-gfm-alerts = "^2.0.0"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^4.2.0"
-pytest = "^8.3.5"
-pylint = "^3.3.7"
-flake8 = "^7.2.0"
-black = "^25.1.0"
-isort = "^6.0.1"
-flynt = "^1.0.2"
-docformatter = {extras = ["tomli"], version = "^1.7.7"}
-mccabe = "^0.7.0"
-nox = "^2025.5.1"
-autoflake = "^2.3.1"
-autopep8 = "^2.3.2"
-ruff = "^0.11.11"
-flake8-pyproject = "^1.2.3"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
-
 
 #
 # Scripts
