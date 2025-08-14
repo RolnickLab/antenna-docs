@@ -65,7 +65,6 @@ repos:
   rev: 0.7.22
   hooks:
   - id: mdformat
-    args: [--number]
     additional_dependencies:
     - mdformat-gfm
 
