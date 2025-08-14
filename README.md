@@ -93,25 +93,25 @@ quality and code analysis.
 
 - To use it manually without needing to create an actual commit:
 
-  ```bash
-  pre-commit run --all-files
-  ```
+    ```bash
+    pre-commit run --all-files
+    ```
 
 - To create a git `pre-commit` hook, so the tool runs before each commit automatically,
-  execute the following command:
+    execute the following command:
 
-  ```bash
-  pre-commit install
-  ```
+    ```bash
+    pre-commit install
+    ```
 
-  - This is a hands-off approach to code quality, as most of the work will be done
-    automatically each time you create a commit. It will, however, force you to fix
-    the remaining warnings after the automatic fixes.
+    - This is a hands-off approach to code quality, as most of the work will be done
+        automatically each time you create a commit. It will, however, force you to fix
+        the remaining warnings after the automatic fixes.
 
 - To remove the `pre-commit` hook, execute `pre-commit clean`
 
 - If you do not want to install `pre-commit` along with your main package, you can use
-  `make install-package`
+    `make install-package`
 
 ### Python library dependencies
 

@@ -67,6 +67,8 @@ repos:
   - id: mdformat
     additional_dependencies:
     - mdformat-gfm
+    - mdformat-gfm-alerts
+    - mdformat-mkdocs
 
 
 # sets up .pre-commit-ci.yaml to ensure pre-commit dependencies stay up to date
