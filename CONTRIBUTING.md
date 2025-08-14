@@ -94,19 +94,3 @@ should be used throughout the repository.
 
 Type hinting is strongly recommended as per the PEP8 standard:
 https://docs.python.org/3/library/typing.html
-
-## Manual checks and fixes with Nox
-
-[Nox, a python bases automation tool](https://nox.thea.codes/en/stable/)
-
-- To use `nox`, you first need to install it, along with the full dev dependencies
-  with the following command:
-
-```bash
-poetry install --with dev
-```
-
-To execute a specific session, use the following command : `make fix-lint`
-
-For more information on the individual tools used, take a look at the
-[pre-commit configuration file](.pre-commit-config.yaml)
