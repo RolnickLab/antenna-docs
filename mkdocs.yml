@@ -16,5 +16,8 @@ nav:
 
 theme: readthedocs
 
+markdown_extensions:
+  - admonition
+
 extra_css:
   - css/extra.css
