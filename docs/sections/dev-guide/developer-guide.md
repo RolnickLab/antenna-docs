@@ -1,4 +1,4 @@
-# Quick Start
+# Getting started 
 
 Antenna uses [Docker](https://docs.docker.com/get-docker/) & [Docker Compose](https://docs.docker.com/compose/install/) to run all services locally for development.
 
