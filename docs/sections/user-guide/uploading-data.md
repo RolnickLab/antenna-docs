@@ -16,7 +16,7 @@ First, download and install [Python](https://www.python.org/). Then try this com
 python --version
 ```
 
-Next, install the utily.
+Next, install the utility.
 
 ```bash
 pip install https://github.com/mihow/ami-camera-utils/archive/refs/heads/main.zip
