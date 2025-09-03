@@ -6,7 +6,7 @@ Valid image formats are PNG, GIF and JPEG. Image filenames must contain a timest
 
 ## Renaming images
 
-If images filenames are not matching the requirements, the images have to be renamed before being uploaded. To automate this process, we recommend [this Python utility](https://github.com/mihow/ami-camera-utils) that renames image files based on their EXIF timestamp data. The script can recursively scan directories, apply date and time corrections, and show a preview before making changes.
+If images filenames are not matching the requirements, the images have to be renamed before being uploaded. To automate this process, we recommend [this Python utility](https://github.com/mihow/ami-camera-utils) that renames image files based on their EXIF timestamp data. The script can recursively scan directories and renames files using the format `prefix-YYYYMMDDHHmmSS.ext`.
 
 ### Install the utility
 
@@ -37,7 +37,7 @@ To rename photos in a folder, use this command. Replace the dummy path with the 
 photo-renamer "path/to/photos" --inplace
 ```
 
-For more options, checkout the utility documention.
+For more options, checkout the [utility documention](https://github.com/mihow/ami-camera-utils).
 
 ### Demo
 
