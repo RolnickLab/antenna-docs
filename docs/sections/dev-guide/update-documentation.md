@@ -21,3 +21,7 @@ Articles are written in [Markdown](https://www.mkdocs.org/user-guide/writing-you
 1. Go to the folder [user-guide](https://github.com/RolnickLab/antenna-docs/tree/main/docs/sections/user-guide) or [dev-guide](https://github.com/RolnickLab/antenna-docs/tree/main/docs/sections/dev-guide)
 2. Locate the article and update it
 3. Open a pull request with the changes
+
+## Demo
+
+<iframe allowfullscreen class="video" src="https://drive.google.com/file/d/16mddpletNXiecVcMKDY23EtyrsviT8wL/preview"></iframe>
