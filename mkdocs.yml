@@ -13,6 +13,7 @@ nav:
       - sections/user-guide/exporting-data.md
   - Developer Guide:
       - sections/dev-guide/developer-guide.md
+      - sections/dev-guide/update-documentation.md
 
 theme: readthedocs
 
