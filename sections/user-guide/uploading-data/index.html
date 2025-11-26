@@ -54,6 +54,16 @@
     </li>
         </ul>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#image-requirements">Image requirements</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#renaming-images">Renaming images</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#install-the-utility">Install the utility</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#use-the-utility">Use the utility</a>
+    </li>
+        </ul>
+    </li>
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../reviewing-data/">Reviewing imported data</a>
@@ -101,7 +111,28 @@
                 <h1 id="uploading-data">Uploading data</h1>
 <h2 id="configuring-a-data-source">Configuring a data source</h2>
 <h3 id="demo">Demo</h3>
-<iframe allowfullscreen class="video" src="https://drive.google.com/file/d/1pnUeMtSXcA-aC7G7JiHDwW5gaGPeG6dl/preview" />
+<iframe allowfullscreen class="video" src="https://drive.google.com/file/d/1pnUeMtSXcA-aC7G7JiHDwW5gaGPeG6dl/preview"></iframe>
+
+<h2 id="image-requirements">Image requirements</h2>
+<p>Valid image formats are PNG, GIF and JPEG. Image filenames must contain a timestamp with year, month, day, hours, minutes and seconds (e.g. 20210101120000-snapshot.jpg). The timestamp in the filename makes it possible to do fast indexing of files, which is helpful when reading a large amount of images from a remote storage.</p>
+<h2 id="renaming-images">Renaming images</h2>
+<p>If images filenames are not matching the requirements, the images have to be renamed before being uploaded. To automate this process, we recommend <a href="https://github.com/mihow/ami-camera-utils">this Python utility</a> that renames image files based on their EXIF timestamp data. The script can recursively scan directories and renames files using the format <code>prefix-YYYYMMDDHHmmSS.ext</code>.</p>
+<h3 id="install-the-utility">Install the utility</h3>
+<p>First, download and install <a href="https://www.python.org/">Python</a>. Then try this command to make sure the installation was successful.</p>
+<pre><code class="language-bash">python --version
+</code></pre>
+<p>Next, install the utility.</p>
+<pre><code class="language-bash">pip install https://github.com/mihow/ami-camera-utils/archive/refs/heads/main.zip
+pip install --upgrade typer
+</code></pre>
+<p>Then try this command to make sure the installation was successful.</p>
+<pre><code class="language-bash">photo-renamer --help
+</code></pre>
+<h3 id="use-the-utility">Use the utility</h3>
+<p>To rename photos in a folder, use this command. Replace the dummy path with the directory containing images to rename. The script will show a confirmation prompt before proceeding.</p>
+<pre><code class="language-bash">photo-renamer &quot;path/to/photos&quot; --inplace
+</code></pre>
+<p>For more options, checkout the <a href="https://github.com/mihow/ami-camera-utils">utility documention</a>.</p>
               
             </div>
           </div><footer>
