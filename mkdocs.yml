@@ -2,16 +2,22 @@ site_name: Antenna Platform Documentation
 
 nav:
   - User Guide:
-    - sections/user-guide/account-creation.md
-    - sections/user-guide/project-creation.md
-    - sections/user-guide/uploading-data.md
-    - sections/user-guide/reviewing-data.md
-    - sections/user-guide/processing-data.md
-    - sections/user-guide/browsing-processed-data.md
-    - sections/user-guide/validating-data.md
-    - sections/user-guide/visualizing-data.md
-    - sections/user-guide/exporting-data.md
+      - sections/user-guide/account-creation.md
+      - sections/user-guide/project-creation.md
+      - sections/user-guide/uploading-data.md
+      - sections/user-guide/reviewing-data.md
+      - sections/user-guide/processing-data.md
+      - sections/user-guide/browsing-processed-data.md
+      - sections/user-guide/validating-data.md
+      - sections/user-guide/visualizing-data.md
+      - sections/user-guide/exporting-data.md
   - Developer Guide:
-    - sections/dev-guide/developer-guide.md
+      - sections/dev-guide/developer-guide.md
 
 theme: readthedocs
+
+markdown_extensions:
+  - admonition
+
+extra_css:
+  - css/extra.css

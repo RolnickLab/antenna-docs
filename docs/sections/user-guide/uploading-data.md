@@ -1,5 +1,11 @@
 # Uploading data
 
+## Configuring a data source
+
+### Demo
+
+<iframe allowfullscreen class="video" src="https://drive.google.com/file/d/1pnUeMtSXcA-aC7G7JiHDwW5gaGPeG6dl/preview" />
+
 ## Image requirements
 
 Valid image formats are PNG, GIF and JPEG. Image filenames must contain a timestamp with year, month, day, hours, minutes and seconds (e.g. 20210101120000-snapshot.jpg). The timestamp in the filename makes it possible to do fast indexing of files, which is helpful when reading a large amount of images from a remote storage.
@@ -38,7 +44,3 @@ photo-renamer "path/to/photos" --inplace
 ```
 
 For more options, checkout the [utility documention](https://github.com/mihow/ami-camera-utils).
-
-### Demo
-
-Coming soon!

@@ -78,7 +78,7 @@ local-check-links: ## Check links in markdown files locally using a docker image
 ## -- Docs targets -------------------------------------------------------------------------------------------------- ##
 .PHONY: preview-docs
 preview-docs: ## Preview the documentation site locally
-	@poetry run mkdocs serve -a 0.0.0.0:7000
+	@poetry run mkdocs serve
 
 
 .PHONY: build-docs
