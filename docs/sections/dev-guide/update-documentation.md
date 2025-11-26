@@ -1,6 +1,6 @@
 # Update documentation
 
-The documentation lives in the public GitHub repository [antenna-docs](https://github.com/RolnickLab/antenna-docs/). To suggest updates, you first need a [GitHub account](https://github.com/signup). Once logged in, you can start open pull requests to add or update articles. All contributions are much appriciated!
+The documentation lives in the public GitHub repository [antenna-docs](https://github.com/RolnickLab/antenna-docs/). To suggest updates, you first need a [GitHub account](https://github.com/signup). Once logged in, you can start open pull requests to add or update articles. All contributions are much appreciated!
 
 Articles are written in [Markdown](https://www.mkdocs.org/user-guide/writing-your-docs/#writing-with-markdown) format. There are currently 2 main categories of articles. The _User Guide_ includes articles for Antenna users. The _Developer Guide_ includes articles for Antenna contributors.
 
