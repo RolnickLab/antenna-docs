@@ -1,7 +1,7 @@
-site_name: Antenna Platform Documentation
+site_name: Antenna documentation
 
 nav:
-  - User Guide:
+  - User guide:
       - sections/user-guide/account-creation.md
       - sections/user-guide/project-creation.md
       - sections/user-guide/uploading-data.md
@@ -11,7 +11,7 @@ nav:
       - sections/user-guide/validating-data.md
       - sections/user-guide/visualizing-data.md
       - sections/user-guide/exporting-data.md
-  - Developer Guide:
+  - Developer guide:
       - sections/dev-guide/developer-guide.md
       - sections/dev-guide/update-documentation.md
 

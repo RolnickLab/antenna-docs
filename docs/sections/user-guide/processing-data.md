@@ -1,6 +1,6 @@
 # Processing data
 
-!!! note
+!!! danger "Warning"
 
     Batch processing is currently in development and problems are likely to occur. If you need data processed, we recommend to reach out to the team for support. Thank you for your patience!
 
